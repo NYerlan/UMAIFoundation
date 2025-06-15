@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import { useCallback } from "react";
 import { toast } from "react-hot-toast";
-import { ImpactStat } from "./components/ImpactStat";
+import { ImpactStat } from "@components/ImpactStat";
 import { faBox, faChild, faPaintBrush, faUser, faClock, faHandshake, faHeart, faPhone } from "@fortawesome/free-solid-svg-icons";
-import ProgramCarousel from "./components/ProgramCarousel";
-import ProgramCard from "./components/ProgramCard";
-import Header from "./components/Header";
+import ProgramGrid from "@components/ProgramGrid";
+import ProgramCarousel from "@components/ProgramCarousel";
+import Header from "@components/Header";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import BackgroundCarousel from "./components/BackgroundCarousel";
+import BackgroundCarousel from "@components/BackgroundCarousel";
 
 export default function Home() {
   return (
@@ -66,16 +66,18 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-primary mb-4">
               Our Mission
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               At UMAI Foundation, we believe in the transformative power of art to bring comfort, joy, and a sense of normalcy to children facing critical illnesses. Our programs provide a creative outlet, helping young patients cope with their treatments and rediscover their inner strength.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-[#ef72a3] text-[#ef72a3] rounded-full transition-all duration-300 hover:bg-[#ef72a3] hover:text-white font-semibold"
-            >
-              Learn More About Us
-            </motion.button>
+            <Link href="/about">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-[#ef72a3] text-[#ef72a3] rounded-full transition-all duration-300 hover:bg-[#ef72a3] hover:text-white font-semibold mb-8"
+              >
+                Learn More About Us
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -133,10 +135,10 @@ export default function Home() {
       </section>
 
       {/* Programs Section */}
-      <section className="py-20 bg-white/95">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16 z-10"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -145,10 +147,12 @@ export default function Home() {
               Our Programs
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
-              Explore our creative programs designed to bring joy and healing to children in need
+              Explore our diverse range of programs designed to bring joy and healing through art
             </p>
           </motion.div>
-          <ProgramCarousel />
+          <div className="w-full max-w-7xl mx-auto">
+            <ProgramCarousel />
+          </div>
         </div>
       </section>
 
