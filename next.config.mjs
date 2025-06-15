@@ -3,7 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['www.umaifoundation.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.umaifoundation.org',
+        pathname: '/**',
+      },
+    ],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',

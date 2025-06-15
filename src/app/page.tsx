@@ -10,16 +10,18 @@ import ProgramCard from "./components/ProgramCard";
 import Header from "./components/Header";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BackgroundCarousel from "./components/BackgroundCarousel";
 
 export default function Home() {
   return (
     <div className="relative">
       <Header />
 
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className="container mx-auto px-4 text-center z-10">
+      <BackgroundCarousel>
+        <div className="text-center z-10">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow-xl"
+            style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -27,7 +29,8 @@ export default function Home() {
             Igniting Hope Through Art
           </motion.h1>
           <motion.p
-            className="text-xl md:text-2xl text-gray-600 mb-8"
+            className="text-xl md:text-2xl text-white mb-8 text-shadow-md"
+            style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -43,13 +46,13 @@ export default function Home() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-[#ef72a3] text-white rounded-full font-semibold hover:bg-[#ef72a3]/90 transition-all duration-300"
+              className="px-8 py-4 bg-[#ef72a3] text-white rounded-full font-semibold hover:bg-white hover:text-[#ef72a3] hover:border-2 hover:border-[#ef72a3] transition-all duration-300"
             >
               Learn More
             </motion.button>
           </motion.div>
         </div>
-      </section>
+      </BackgroundCarousel>
 
       {/* Our Mission Section */}
       <section className="py-20 bg-white">

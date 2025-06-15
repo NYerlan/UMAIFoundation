@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface ProgramCardProps {
   title: string;
@@ -10,10 +11,10 @@ export default function ProgramCard({ title, description, imageUrl }: ProgramCar
   return (
     <motion.div 
       whileHover={{ scale: 1.02 }}
-      className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 text-center transition-all duration-300 relative overflow-hidden z-10"
+      className="bg-white/95 backdrop-blur-sm rounded-xl p-4 text-center transition-all duration-300"
     >
-      <div className="relative z-10">
-        <div className="aspect-square mb-6">
+      <div className="relative">
+        <div className="aspect-square mb-4">
           <motion.div 
             className="relative w-full h-full rounded-xl overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
@@ -53,16 +54,18 @@ export default function ProgramCard({ title, description, imageUrl }: ProgramCar
         >
           {description}
         </motion.p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-6 py-3 border-2 border-[#ef72a3] text-[#ef72a3] rounded-full transition-all duration-300 hover:bg-[#ef72a3] hover:text-white font-semibold"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          Learn More
-        </motion.button>
+        <Link href="/about">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-6 py-3 border-2 border-[#ef72a3] text-[#ef72a3] rounded-full transition-all duration-300 hover:bg-[#ef72a3] hover:text-white font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            Learn More
+          </motion.button>
+        </Link>
       </div>
     </motion.div>
   );
