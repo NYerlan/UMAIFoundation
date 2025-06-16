@@ -56,16 +56,16 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-xl font-bold text-primary mb-4">Contact Us</h4>
+            <h4 className="text-xl font-bold text-primary mb-4">Visit Us</h4>
             <div className="space-y-4">
               <p className="text-gray-600">
-                <span className="font-semibold">Address:</span> 123 Main Street, Suite 100, City, State, ZIP
+                <span className="font-semibold">Address:</span> 24230 Hawthorne Boulevard, Torrance, 90505, California, USA
               </p>
               <p className="text-gray-600">
-                <span className="font-semibold">Phone:</span> (555) 123-4567
+                <span className="font-semibold">Phone:</span> +1 (310) 818 17 61
               </p>
               <p className="text-gray-600">
-                <span className="font-semibold">Email:</span> info@umai.org
+                <span className="font-semibold">Email:</span> info@umaifoundation.org
               </p>
             </div>
           </motion.div>

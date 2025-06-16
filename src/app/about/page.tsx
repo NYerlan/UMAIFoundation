@@ -69,13 +69,53 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            className="grid md:grid-cols-2 gap-8 items-center"
           >
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Mission</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We are dedicated to improving the lives of children through education, healthcare, and community support.
-            </p>
+            {/* Image Column */}
+            <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden">
+              <img 
+                src="/images/mission-placeholder.jpg" 
+                alt="UMAI Foundation Mission" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
+
+            {/* Text Column */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-primary">Our Mission</h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                UMAI Foundation is a non-profit organization dedicated to supporting pediatric patients with cancer and other critical medical conditions — along with their siblings, families, and caregivers — by harnessing the healing power of art and creativity. Our mission is to uplift young patients emotionally and mentally during treatment through expressive programs, art-based therapy, and community support initiatives.
+              </p>
+            </div>
           </motion.div>
+
+          {/* Our Story Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="grid md:grid-cols-2 gap-8 items-center"
+          >
+            {/* Text Column */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-primary">Our Story</h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Umai Foundation was born from a simple yet powerful belief: creativity heals. Founded by passionate educators and fashion professionals who witnessed firsthand the transformative power of art, sewing, and design, Umai Foundation seeks to bring hope, resilience, and joy to children facing cancer. We saw how, with needle and thread, fabric and color, young hearts can rediscover confidence, forge new friendships, and express emotions that words alone cannot capture.
+              </p>
+            </div>
+
+            {/* Image Column */}
+            <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden">
+              <img 
+                src="/images/story-placeholder.jpg" 
+                alt="UMAI Foundation Story" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-2xl font-bold text-primary mb-4">Education</h3>
@@ -180,37 +220,60 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            className="grid md:grid-cols-2 gap-8 items-center"
           >
-            <h2 className="text-4xl font-bold text-primary mb-4">Our History</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A journey of impact and growth
-            </p>
+            {/* Image Column */}
+            <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden">
+              <img 
+                src="/images/history-placeholder.jpg" 
+                alt="UMAI Foundation History" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
+
+            {/* Text Column */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-primary">Our History</h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                A journey of impact and growth
+              </p>
+            </div>
           </motion.div>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">2020 - Foundation</h3>
-                  <p className="text-gray-600">
-                    Founded by passionate educators and healthcare professionals.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">2021 - Expansion</h3>
-                  <p className="text-gray-600">
-                    Launched our first major programs and partnerships.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">2022 - Growth</h3>
-                  <p className="text-gray-600">
-                    Expanded our reach to serve more communities and children.
-                  </p>
-                </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-2">2020 - Foundation</h3>
+                <p className="text-gray-600">
+                  Founded by passionate educators and healthcare professionals.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-2">2021 - Expansion</h3>
+                <p className="text-gray-600">
+                  Launched first art therapy program in local hospitals.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-2">2022 - Growth</h3>
+                <p className="text-gray-600">
+                  Expanded to serve 5 hospitals and 10 schools.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-2">2023 - Impact</h3>
+                <p className="text-gray-600">
+                  Reached 1,000+ children with our programs.
+                </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
